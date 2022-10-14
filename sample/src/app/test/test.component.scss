@@ -1,0 +1,39 @@
+.class {
+  border: 1px solid rgb(51, 255, 0);
+  height: 50%;
+}
+.button:focus {
+  color: black;
+  background-color: white;
+}
+.policy {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.button1 {
+  border-radius: 80%;
+  margin: inherit;
+  padding: 20px;
+  position: 100px;
+}
+.sdate {
+  border-radius: 20%;
+}
+.nextbutton {
+  padding: 5px;
+  border-radius: 15px;
+  width: 10%;
+}
+
+
+/* Set top-lef and bottom-left corner radius */
+:host ::ng-deep .mat-form-field-outline-start {
+    border-radius: 20px 0 0 20px !important;
+    min-width: 20px !important;
+}
+ 
+/* Set top-right and bottom-right corner radius */
+:host ::ng-deep .mat-form-field-outline-end {
+    border-radius: 0 15px 15px 0 !important;
+}

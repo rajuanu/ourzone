@@ -1,0 +1,103 @@
+<div class="row class">
+  <div class="col-md-4 bg-success">
+    <mat-selection-list #shoes [multiple]="false">
+      <mat-list-option
+        (click)="click(i+1)"
+        *ngFor="let shoe of typesOfShoes;let i=index"
+        class="button"
+        [value]="shoe"
+      >
+        {{shoe}}
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+  <div class="col-8">
+    <div *ngIf="element===1">
+      <p class="policy">
+        Miscellaneous: Employee Conmpensation Insurane policy
+      </p>
+     <div class="row">
+        <div class="col-6">
+            <mat-label>Policy Start Date</mat-label>
+            <mat-form-field class="w-100" appearance="outline">
+                
+                <input matInput [matDatepicker]="picker1" class="sdate">
+            
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+        </div>
+        <div class="col-6">
+            <mat-label>Policy End Date</mat-label>
+            <mat-form-field class="w-100" appearance="outline">
+              
+                <input matInput [matDatepicker]="picker"  >
+                
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+        </div>
+     </div>
+
+     <div class="row">
+        <div class="col-6">
+            <mat-label>Policy satrt time</mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+                
+                <input matInput placeholder="Placeholder"  class="sdate">
+              
+               
+              </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-label>policy End Time</mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+               
+                <input matInput placeholder="Placeholder"  class="sdate">
+               
+           
+              </mat-form-field>
+        </div>
+     </div>
+      
+     <div class="row">
+        <div class="col-6">
+            <mat-label>Transaction Type</mat-label>
+            <mat-form-field appearance="outline" class="w-100">
+              <mat-select placeholder="new business">
+                <mat-option *ngFor="let business of NewBusiness" [value]="business">
+                    {{business}}
+                </mat-option>
+              </mat-select>
+               
+              </mat-form-field>
+        </div>
+        <div class="col-md-6">
+            <mat-label>Customer Name</mat-label>
+            <mat-form-field appearance="outline" class="w-100" >
+               
+                <input matInput placeholder="Placeholder" >
+             </mat-form-field>
+        </div>
+     </div>
+      <div class="row">
+        <div class="col-10 text-end">
+            <button class="nextbutton">next</button>
+        </div>
+      </div>
+
+    </div>
+        <div *ngIf="element===2">
+                <h1>nhshdcwNHs</h1>
+    </div>
+    <div *ngIf="element===3">
+      <h1>cbgxnsfSAV</h1>
+    </div>
+    <div *ngIf="element===4">
+      <h1>sandeep</h1>
+    </div>
+    <div *ngIf="element===5">
+      <h1>raju</h1>
+    </div>
+  </div>
+</div>
